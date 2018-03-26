@@ -1,6 +1,6 @@
 //
 //  RFQuiltLayout.h
-//  
+//
 //  Created by Bryce Redd on 12/7/12.
 //  Copyright (c) 2012. All rights reserved.
 //
@@ -10,8 +10,8 @@
 
 @protocol RFQuiltLayoutDelegate <UICollectionViewDelegate>
 @optional
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout blockSizeForItemAtIndexPath:(NSIndexPath *)indexPath; // defaults to 1x1
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetsForItemAtIndexPath:(NSIndexPath *)indexPath; // defaults to uiedgeinsetszero
+- (CGSize) blockSizeForItemAtIndexPath:(NSIndexPath *)indexPath; // defaults to 1x1
+- (UIEdgeInsets) insetsForItemAtIndexPath:(NSIndexPath *)indexPath; // defaults to uiedgeinsetszero
 @end
 
 @interface RFQuiltLayout : UICollectionViewLayout
@@ -26,3 +26,4 @@
 @property (nonatomic) BOOL prelayoutEverything;
 
 @end
+

@@ -115,7 +115,9 @@
     
     for(UICollectionViewUpdateItem* item in updateItems) {
         if(item.updateAction == UICollectionUpdateActionInsert || item.updateAction == UICollectionUpdateActionMove) {
-            [self fillInBlocksToIndexPath:item.indexPathAfterUpdate];
+            if(item.indexPathAfterUpdate.row != LONG_MAX) {
+                [self fillInBlocksToIndexPath:item.indexPathAfterUpdate];
+            }
         }
     }
 }
